@@ -1,0 +1,43 @@
+media_homepage:
+    path:     /
+    defaults: { _controller: MediaBundle:Default:index }
+
+media_listMedia: # <= nom de la route
+    path:     /medias # <= url navigateur
+    defaults: { _controller: MediaBundle:Media:list }
+
+media_insertMedia:
+    path:     /media
+    defaults: { _controller: MediaBundle:Media:insert }
+
+media_deleteMedia:
+    path:     /media/delete/{id}
+    defaults: { _controller: MediaBundle:Media:delete }
+    requirements:
+        id: '\d+'
+
+media_listGenre:
+    path:     /genres
+    defaults: { _controller: MediaBundle:Genre:list }
+
+media_listPersonne:
+    path:     /personnes
+    defaults: { _controller: MediaBundle:Personne:list }
+
+media_insertPersonne:
+    path:     /personne/testinsertion
+    defaults: { _controller: MediaBundle:Personne:index }
+
+media_editPersonne:
+    path:     /personne/edit/{id}
+    defaults: { _controller: MediaBundle:Personne:edit, id: null }
+
+media_deletePersonne:
+    path:     /personne/delete/{id}
+    defaults: { _controller: MediaBundle:Personne:delete }
+
+
+media_listTypeMedia:
+    path:     /typesMedia
+    defaults: { _controller: MediaBundle:TypeMedia:list }
+

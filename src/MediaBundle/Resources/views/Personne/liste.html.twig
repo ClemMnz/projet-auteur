@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{# INTERDICTION DE METTRE DU CONTENU A
+    L'EXTERIEUR D'UN BLOCK #}
+{% block body %}
+    {{ message }}
+    <table class="table">
+    {% for p in personnesList %}
+        <tr>
+            <td>{{ p.nom }}</td>
+            <td>{{ p.prenom }}</td>
+            <td>{{ p.email }}</td>
+            <td>    {{ p.password }}</td>
+            <td><a class="btn btn-warning btn-xs" href="{{ url('media_deletePersonne', {'id' : p.id }) }}">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a></td>
+        </tr>
+        {% else %}
+        Aucune personne disponible.
+    {% endfor %}
+    </table>
+
+{% endblock %}

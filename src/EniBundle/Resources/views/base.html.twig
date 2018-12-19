@@ -1,0 +1,20 @@
+{# Utilisation de la master page se trouvant dans
+    app/Resources/views/ #}
+{% extends "base.html.twig" %}
+{# Commentaire : parent() réutilise le code du
+ bloc parent (dans base.html.twig) #}
+{% block title %} {{ parent() }} toto {% endblock %}
+
+{% block body %}
+    <div class="content-left">
+        <ul>
+        {% block left %} {% endblock %}
+        </ul>
+    </div>
+    <main>
+    <!-- Commentaire html -->
+    {% block content %} {% endblock %}
+    </main>
+{% endblock %}
+
+

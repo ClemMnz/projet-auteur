@@ -1,0 +1,7 @@
+eni_homepage:
+    path:     /
+    defaults: { _controller: EniBundle:Default:index }
+
+eni_hello:
+    path:     /hello/{nom}
+    defaults: { _controller: EniBundle:Default:hello }
