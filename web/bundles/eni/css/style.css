@@ -1,0 +1,19 @@
+body {
+    font-size: 20px;
+    font-family: Arial;
+    width: 800px;
+    margin:auto;
+}
+.content-left {
+    border:solid 2px pink;
+    margin-bottom: 5px;
+}
+main {
+    border:solid 3px #218BC3;
+}
+@media screen and (max-width: 640px) {
+    body {
+        width: 90%;
+        margin-left:5%;
+    }
+}
